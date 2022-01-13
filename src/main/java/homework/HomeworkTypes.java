@@ -125,8 +125,8 @@ public class HomeworkTypes {
         long abortionsThisYear = 642850;
         System.out.println(abortionsThisYear);
 
-        long HIVAndAIDSInfectedPeople = 43306703;
-        System.out.println(HIVAndAIDSInfectedPeople);
+        long hivAndAidsInfectedPeople = 43306703;
+        System.out.println(hivAndAidsInfectedPeople);
 
         long ciragettesSmokedToday = 753050280;
         System.out.println(ciragettesSmokedToday);
@@ -166,6 +166,21 @@ public class HomeworkTypes {
 
         char myNameFirstLetter = '\u004A';
         System.out.println(myNameFirstLetter);
+
+        boolean isFree = false;
+        boolean isNotFree = true;
+        System.out.println(isFree);
+
+        boolean iLoveFitness = true;
+        boolean iHateFitness = false;
+        System.out.println(iLoveFitness);
+
+        int f = 8;
+        int g = 4;
+        boolean x = f > g;
+        System.out.println("This value is: " + x);
+        boolean y = g > f;
+        System.out.println("This value is: " + y);
 
 
 // 2 Вывести на экран минимальное и максимальное значение каждого типа данных.
