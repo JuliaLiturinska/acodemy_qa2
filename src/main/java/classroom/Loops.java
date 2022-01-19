@@ -31,7 +31,8 @@ public class Loops {
             System.out.println("Hello World");
         }
 
-        String[] fruits = {"apple", "kiwi", "banana", "strawberry", "lemon"};
+
+              String[] fruits = {"apple", "kiwi", "banana", "strawberry", "lemon"};
         // fruits.length = 5;
         // fruits[0] = apple
         // fruits[1] = kiwi
@@ -39,7 +40,7 @@ public class Loops {
 
         for (int i = 0; i < fruits.length; i++) {
             System.out.println(fruits[i]);
-        }
+    }
 
         for(String fruit : fruits) {
             System.out.println(fruit);
