@@ -19,8 +19,19 @@ public class HomeWork {
  Написать программу необходимо таким образом, чтобы изменяя значения переменной,
  можно было бы попасть в определенную группу и получить сообщение на экран о том,
  в какой возрастной группе вы находитесь и на какую скидку можете расчитывать. (Текст придумать самим)
+
  */
 
+        int age = 18;
+
+        if(age >=18 && age <=21) {
+            System.out.println("You can get discount 10%");
+        } else if(age >=22 && age <=65) {
+            System.out.println("You can get discount 15%");
+        } else if(age > 65) {
+            System.out.println("You can get discount 20%");
+
+        }
 /*
  3 Создать массив String и добавить в него 10 наименований животных.
   a Пройтись циклом по массиву, найти и распечатать любого животного.
@@ -54,7 +65,19 @@ public class HomeWork {
  Транспортом может быть (машина, автобус, такси и т.д)
  Относительно значения, которое храниться в переменной используя оператор switch
  научить программу выводить на экран то, каким образом планируете добраться до работы.
-*/
+
+ */
+        String currentTransport = "car";
+        switch (currentTransport) {
+            case "car":
+                System.out.println("I will ride car");
+                break;
+            case "bicycle":
+                System.out.println("I will ride a bicycle");
+                break;
+            default:
+                System.out.println("??");
+        }
 
 // 6 Распечатать на экране числа от 1 до 100.
 
