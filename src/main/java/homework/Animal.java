@@ -1,62 +1,79 @@
 package homework;
 
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.sql.SQLOutput;
-
 @Slf4j
-public class Animal {
-    private String name;
-    private  int energyCount = 4;
-    private boolean isSleeping = false;
-    private boolean isEating = false;
-    private boolean isPlaying = false;
+@AllArgsConstructor
 
-    public Animal(String name, boolean b2, boolean b1, boolean b, int i) {
+public class Animal {
+
+        private String name;
+        private int energyCount = 4;
+        private int legsCount = 4;
+        private boolean isSleeping = false;
+        private boolean isEating = false;
+        private boolean isPlaying = false;
+        private boolean isWalking = false;
+
+ /*   public Animal(String name, int energyCount, int legsCount, boolean isSleeping, boolean isEating, boolean isPlaying) {
         this.name = name;
+        this.energyCount = energyCount;
+        this.legsCount = legsCount;
         this.isSleeping = isSleeping;
         this.isEating = isEating;
         this.isPlaying = isPlaying;
-        this.energyCount = energyCount;
-
     }
 
-    public void walk() {
-        log.info("test log");
-        if (energyCount == 0) {
-            System.out.println("Please feed me!");
-        } else if (energyCount > 1) {
-            System.out.println(name + " is happy to go for a walk");
-        }
-    }
-    public void feed() {
-        log.info("test log");
-        if (energyCount == 4) {
-            System.out.println("No need to feed me!");
-        } else if (energyCount < 4) {
-            energyCount = 4;
-            System.out.println(name + " is happy, energy now is " + energyCount);
-        }
-    }
-    public void play() {
-        if (energyCount ==0) {
-            System.out.println("Please let me sleep!");
-        } else if (energyCount > 1) {
-            System.out.println(name + " is happy to play");
+  */
 
+    public Animal(String name, int energyCount, int legsCount, boolean isSleeping){
+            this.name = name;
+            this.energyCount = energyCount;
+            this.legsCount = legsCount;
+            this.isSleeping = isSleeping;
         }
 
-    }
 
-   // public void status() {
-   //     System.out.println("Status of animal", name, isSleeping);
-    // }
+        public void walk () {
+            log.info("Walk time");
+            if (energyCount == 0) {
+                System.out.println("Please feed me! - said " + name);
+            } else {
+                energyCount--;
+                System.out.println(name + " is happy to go for a walk" +"\n" + "Energy now: " + energyCount);
+            }
+        }
+        public void feed () {
+            log.info("Feed time");
+            if (energyCount == 4) {
+                System.out.println("No need to feed me! - said " + name);
+            } else if (energyCount < 4) {
+                energyCount = 4;
+                System.out.println(name + " is happy, energy now is " + energyCount);
+            }
+        }
+        public void play () {
+        log.info("Play time");
+            if (energyCount == 0) {
+                System.out.println("Please let me sleep! - said " + name);
+            } else if (energyCount > 1) {
+                System.out.println(name + " is happy to play" + "\n" + "Energy now: " + energyCount);
 
-    public void goSleep() {
-        if(energyCount == 0);
-        System.out.println(name + " is going to sleep!");
+            }
+
+        }
+
+        // public void status() {
+        //     System.out.println("Status of animal", name, isSleeping);
+        // }
+
+        public void goSleep () {
+        log.info("Sleep time");
+            if (energyCount == 0) ;
+            System.out.println(name + " is going to sleep!");
+        }
     }
-}
 /*
 • Создать класс Animal и описать свойства, которые присущи каждому животному.
  • Создать пустой конструктор, со всеми полями и выборочно
